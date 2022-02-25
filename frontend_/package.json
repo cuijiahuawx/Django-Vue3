@@ -1,0 +1,52 @@
+{
+    "name": "element-plus-vite-starter",
+    "version": "0.1.0",
+    "scripts": {
+        "dev": "vite",
+        "build": "run-s build::prepare build::build build::moveindex build:clean",
+        "serve": "vite preview",
+        "build:prepare": "del ../backend/static/frontend/assets/* ../backend/templates/index.html --force",
+        "build:build": "vite build --base=/static/frontend/",
+        "build:moveindex": "move-file ../backend/static/frontend/index.html ../backend/templates/index.html",
+        "build:clean": "del ./dist"
+    },
+    "dependencies": {
+        "@kangc/v-md-editor": "^2.3.13",
+        "add": "^2.0.6",
+        "axios": "^0.25.0",
+        "element-plus": "^1.2.0-beta.1",
+        "font-logos": "^0.18.0",
+        "jwt-decode": "^3.1.2",
+        "md-editor-v3": "^1.10.1",
+        "pinia": "^2.0.10",
+        "prettier": "^2.5.1",
+        "sanitize-html": "^2.7.0",
+        "vue": "^3.2.20",
+        "vue-router": "^4.0.12",
+        "vue3-highlightjs": "^1.0.5",
+        "yarn": "^1.22.17"
+    },
+    "devDependencies": {
+        "@types/node": "^16.11.6",
+        "@vicons/antd": "^0.12.0",
+        "@vicons/carbon": "^0.12.0",
+        "@vicons/fa": "^0.12.0",
+        "@vicons/fluent": "^0.12.0",
+        "@vicons/ionicons4": "^0.12.0",
+        "@vicons/ionicons5": "^0.12.0",
+        "@vicons/material": "^0.12.0",
+        "@vicons/tabler": "^0.12.0",
+        "@vicons/utils": "^0.1.4",
+        "@vitejs/plugin-vue": "^1.9.4",
+        "@vue/compiler-sfc": "^3.2.20",
+        "del-cli": "^4.0.1",
+        "move-file-cli": "^3.0.0",
+        "npm-run-all": "^4.1.5",
+        "sass": "^1.43.4",
+        "typescript": "^4.4.4",
+        "unplugin-vue-components": "^0.17.0",
+        "vite": "^2.6.13",
+        "vite-plugin-prismjs": "^0.0.8"
+    },
+    "license": "MIT"
+}
